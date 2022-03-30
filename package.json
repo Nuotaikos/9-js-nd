@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./js/variables.js",
+    "dev": "nodemon ./js/kovo-30.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
