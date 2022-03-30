@@ -44,3 +44,13 @@ console.log('Padidintas 1:', ++a);
 
 let b = 9;
 console.log('Sumazintas 1:', --b);
+
+/*
+2. Mokinys eina gatve ir prieina sankryžą reguliuojamą šviesoforu. Sudarykite programą, kuri nustatytu, kaip turi pasielgti mokinys? Žinome šviesoforo spalvos kodą n, 1-žalia, 2-
+geltona, 3-raudona. Pasitikrinkite: Kai n= 2, turėtume gauti: Palaukite.
+*/
+
+const zalia = 1;
+const geltona = 2;
+const raudona = 3;
+console.log('Palaukite:', geltona);
