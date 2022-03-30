@@ -5,8 +5,8 @@ Rezultatą išvesti į console
 */
 const balai = [5, 9, 10, 2, 5];
 console.log('Balai', balai);
-
-
+let baluSuma = balai[0] - balai[1] + balai[2] - balai[3] + balai[4];
+console.log(baluSuma);
 
 
 /*
@@ -22,16 +22,18 @@ console.log('Geles:', geles);
 const zydejimoMenesis = ['balandis','gegužė', 'birželis','liepa', 'rugpjūtis']; 
 console.log('Zydejimo menesis:', zydejimoMenesis);
 
-const sarasuVertes = zydejimoMenesis[4] + " , " + zydejimoMenesis[3] + " , " + zydejimoMenesis[2] + " , " +zydejimoMenesis[1] + " , " + zydejimoMenesis[0] + " , " + geles[4] + " , " + geles[3] + " , " + geles[2] + " , " + geles[1] + " , " + geles[0]  + " , " + zydejimoMenesis[4]  + " , " + zydejimoMenesis[3]  + " , " + zydejimoMenesis[2]  + " , " + zydejimoMenesis[1]  + " , " + zydejimoMenesis[0];
+const sarasuVertes = zydejimoMenesis[4] + ", " + zydejimoMenesis[3] + ", " + zydejimoMenesis[2] + " , " +zydejimoMenesis[1] + " , " + zydejimoMenesis[0] + " , " + geles[4] + " , " + geles[3] + " , " + geles[2] + " , " + geles[1] + " , " + geles[0]  + " , " + zydejimoMenesis[4]  + ", " + zydejimoMenesis[3]  + " , " + zydejimoMenesis[2]  + " , " + zydejimoMenesis[1]  + " , " + zydejimoMenesis[0];
 console.log(sarasuVertes);
 
 /*1.Žinomas skaičius n. Parašykite programą, kuri nustatytų ar skaičius yra blogas ar geras? Neigiamas –„Blogas“, teigiamas „Geras“. Pasitikrinkite: Kai n = 20, turėtume gauti: Skaičius geras.
 */
-const n = 20;
-const d = -20;
-if (n > d) {
+let n = 20;
+
+if (n > 0) {
     console.log('Skaicius geras');
-} else {
+}
+
+if (n < 0) {
     console.log('Skaicius blogas');
 }
 
@@ -39,18 +41,72 @@ if (n > d) {
 4. Duoti du sveikieji skaičiai a ir b. Parašykite programą, kuri didesnį skaičių pamažintu vienetu, o mažesnį padidintu vienetu.
 */
 
-let a = 5;
-console.log('Padidintas 1:', ++a);
-
+let a = 15;
 let b = 9;
-console.log('Sumazintas 1:', --b);
+console.log('A= '+ a + ', B= ' + b);
+if (a > b) {
+   a--;
+   b++;
+} else if (a < b) {
+   a++;
+   b--; 
+}
+console.log('A= '+ a + ', B= ' + b);
 
 /*
 2. Mokinys eina gatve ir prieina sankryžą reguliuojamą šviesoforu. Sudarykite programą, kuri nustatytu, kaip turi pasielgti mokinys? Žinome šviesoforo spalvos kodą n, 1-žalia, 2-
 geltona, 3-raudona. Pasitikrinkite: Kai n= 2, turėtume gauti: Palaukite.
 */
 
-const zalia = 1;
-const geltona = 2;
-const raudona = 3;
-console.log('Palaukite:', geltona);
+n = 3;
+if (n === 1) {
+    console.log('Eikite');
+} else if (n === 2) {
+    console.log('Palaukite');
+} else if (n === 3) {
+    console.log('Sustokite');
+}
+
+/*
+Gintautas planuoja persikraustyti į naujus namus ir jam reikia sudėti visas turimas knygas į dėžes. Gintautas turi d dėžių ir k knygų. Parašykite programą, kuri apskaičiuotų, ar Gintauto turimos knygos tilps į dėžes, jei į vieną dėžę telpa po n knygų. Pasitikrinkite: 
+Kai d=2, k=8, n=5 tuomet ekrane turi būti rodomas pranešimas: Knygos telpa į dėžes; kai d=3, k=18, n=5 tuomet ekrane turi būti rodomas pranešimas: Knygos netelpa į dėžes.
+*/
+let dezes = 2;
+let knygos = 12;
+let talpa = 5;
+if (knygos <= dezes * talpa) {
+    console.log('Knygos tilps i dezes');
+} else {
+    console.log('Knygos netilps');
+}
+/*
+Saulius sutaupė c centų ir už juos nusprendė nusipirkti ledų. Parduotuvėje porcija ledų kainuoja p centų. Parašykite programą, kuri suranda, kiek porcijų ledų k nusipirks Saulius ir kiek centų m dar liks. Pasitikrinkite Kai c=50, p=20, turi būti : Saulius nusipirks 2 porcijas, liks centų 10. Gali prireikti panaudoti Math.floor() funkciją.
+*/
+
+let centai = 50;
+let porcijosKaina = 30;
+console.log('Uz ' + centai + ' centu Saulius gales nusipirkti ' + Math.floor(centai / porcijosKaina) + ' porcijas ir jam liks ' + (centai % porcijosKaina ) + ' centu');
+
+/*
+Yra n degtukų. Parašykite programą, kuri nustatytų, ar iš tų degtukų galima sudėti lygiakraštį trikampį. Dėliojamai figūrai turi būti panaudoti visi degtukai. Degtukų laužyti negalima. Pasitikrinkite: jei n = 6, turi būti: Trikampį sudėlioti galima. jei n = 4, turi būti: Trikampį sudėlioti negalima.
+*/
+
+let degtukai = 4;
+if (degtukai % 3 === 0) {
+    console.log('Galima sudeti trikampi');
+} else {
+    console.log('Trikampio sudeti negalima');
+}
+
+/*
+Parašykite programą, kuri žinant mėnesio numerį n atspausdintų to mėnesio dienų kiekį d. (tarkime, kad metai yra paprastieji) (pvz. n=5, ats. d=31; n=2 ats. d=28)
+*/
+
+let menesis = 12;
+if (menesis === 1 || menesis === 3 || menesis === 5 || menesis === 7 || menesis === 8 || menesis === 10 || menesis === 12) {
+    console.log('Menuo turi 31 diena');
+} else if (menesis === 2) {
+    console.log('Menuo turi 28 diena');
+} else {
+    console.log("Menuo turi 30 dienu");
+}
