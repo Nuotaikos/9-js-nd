@@ -160,41 +160,15 @@ for (let i=0; i<=4; i++) {
 }
 
 
-/* 2. panaudojant ciklą perrašyti tekstinio tipo kintamųjų reikšmes iš kito galo: pvz.: “abcdef” -> “fedcba”
-const reiksmes = [a, b, c, d, e, f, ];
-
-for (let i=0; i < reiksmes.length; i++) {
-    const reiksme = reiksmes[i];
-    suma += reiksme;
-}
-/*3.	Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
-a)	0 - 11
-b)	8 - 31
-c)	-18 - 18
-d)	rezultatą pateikti tokiu formatu:
-•	Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 3 yra 4 vienetai.
-•	Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 5 yra 3 vienetai.
-•	Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 7 yra 2 vienetai.
-*/
-
-
-/*
-1. Naudojant ciklą atspausdinti penkias eilutes ‘Labas’.
-2. Naudojant ciklą penkiose eilutėse atspausdinti skaičius 0 1 2 3 4 (vienas skaičius vienoje eilutėje).
-3. Naudojant ciklą penkiose eilutėse atspausdinti skaičius 0 10 20 30 40 (vienas skaičius vienoje eilutėje).
-4. Naudojant ciklą penkiose eilutėse atspausdinti skaičius 49 50 51 52 53 (vienas skaičius vienoje eilutėje).
-5. Naudojant ciklą penkiose eilutėse atspausdinti skirtingus atsitiktinius skaičius nuo 0 iki 10 (vienas skaičius vienoje eilutėje).
-6. Naudojant ciklą, atspausdinti skaičius nuo 1 iki 20. Nespausdinti skaičių, kurie dalinasi iš 3.
-7. Parašykite programą, kuri atspausdintų įvesto skaičiaus daugybos lentelę nuo 1 iki 10.
-8. Vienas colis yra 2,54 cm. Sudarykite programą kuri pateiktų ekrane lentelę nuo 1 iki n colius centimetrais.
-9. Bankas moka 2% metinių palūkanų. Indėlininkas pasidėjo į banką 100e. Sudarykite 
-kasmetinę banko atskaitą klientui iki n metų. Ataskaitoje pateikite: metus, palūkanas, indėlį.
-10. Keliamieji metai turi 366 dienas, paprastieji – 365. Visi metai, išskyrus šimtmečius, yra keliamieji, jie dalūs iš 4. Šimtmečių metai yra keliamieji, jeigu dalūs 400. Pvz.: 1600 metai yra keliamieji, nes dalūs iš 400, o 1700 – paprastieji. Raskite visus mūsų eros keliamuosius metus.
+//CIKLAI
+console.log('------------------------------------');
 function rand(min, max) {
-Return Math.floor(Math.random()*(max-min+1)+min);
-*/
-
+    return Math.floor(Math.random()*(max-min+1)+min);
+    }
 //1. nepadaryta su Labas
+for (let i=0; i<=4; i++) {
+    console.log('Labas');
+}
 console.log('------------------------------------');
 //2. atspausdinti skaičius 0 1 2 3 4
 for (let i=0; i<=4; i++) {
@@ -209,10 +183,109 @@ for (let i=0; i<=40; i++) {
 for (let i=49; i<=53; i++) {
     console.log(i);
 }
-// 4.atspausdinti skirtingus atsitiktinius skaičius nuo 0 iki 10
-for (let i=0; i<Math.floor(Math.random() *  10); i++) {
-    console.log(i);
+// 5. Naudojant ciklą penkiose eilutėse atspausdinti skirtingus atsitiktinius skaičius nuo 0 iki 10 (vienas skaičius vienoje eilutėje).
+for (let i=0; i<5; i++) {
+    console.log(rand(0,10));
 }
+//6. Naudojant ciklą, atspausdinti skaičius nuo 1 iki 20. Nespausdinti skaičių, kurie dalinasi iš 3.
+for (let i = 1; i <= 20; i++) {
+    if (i % 3 !== 0) {
+    console.log(i);
+    }  
+}    
+//7. Parašykite programą, kuri atspausdintų įvesto skaičiaus daugybos lentelę nuo 1 iki 10.
+let skai = 5;
+for (let i = 1; i <= 10; i++) {
+    console.log(i * skai);
+}
+//8. Vienas colis yra 2,54 cm. Sudarykite programą kuri pateiktų ekrane lentelę nuo 1 iki n colius centimetrais.
+let n = 15;
+for (let i = 1; i <= n; i++) {
+    console.log(i * 2.54);
+}
+//9. Bankas moka 2% metinių palūkanų. Indėlininkas pasidėjo į banką 100e. Sudarykite kasmetinę banko atskaitą klientui iki n metų. Ataskaitoje pateikite: metus, palūkanas, indėlį.
+let palukanos = 2;
+let indelis = 100;
+for (let i = 1; i <= n; i++) {
+    let palukanuDydis = (Math.round(indelis * palukanos)) /100;
+    indelis += palukanuDydis;
+    console.log ('Po ' + i + ' metu indelio dydids bus ' + indelis + ', o tu metu palukanu norma ' + palukanuDydis);
+}
+//10. Keliamieji metai turi 366 dienas, paprastieji – 365. Visi metai, išskyrus šimtmečius, yra keliamieji, jie dalūs iš 4. Šimtmečių metai yra keliamieji, jeigu dalūs 400. Pvz.: 1600 metai yra keliamieji, nes dalūs iš 400, o 1700 – paprastieji. Raskite visus mūsų eros keliamuosius metus. 
 
+/*
+let kelemieji = 366;
+let paprastieji = 365;
+for (let i = 0; i <= i; i++) {
+    if ((0 == kelemieji % 4)  {
+        console.log(kelemieji + ' yra kelemieji metai');
+    } else {
+        console.log(paprastieji + ' yra paprastieji metai');
+    }
+}
+*/
 
+/*FUNKCIJOS
+8. Parašyti funkciją telefonoNumeris, kuri priima vieną kintamąjį – masyvą su 10 skaičių jame. Funkcija turi grąžinti telefono numerį tokiu formatu - "(XXX) XXX-XXXX".
+9. Parašyti funkciją, kuri priimtų du kintamuosius - tekstus. Palyginti kuris tekstas yra ilgesnis.
+10. Parašyti funkciją, kuri priimtų vieną kintamąjį - tekstą. Suskaičiuoti, kiek tekste yra ‚a‘ raidžių
+*/
+
+//1. Parašyti funkciją, kuri priima du skaičius. Grąžina tų skaičių sumą.
+function sum(a,b){
+	return a+b;
+}
+console.log(sum(1,2));
+//2. Parašyti funkciją, kuri priima du kintamuosius. Palygina tuos du skaičius ir grąžina rezultatą ar pirmas skaičius yra didesnis, ar antras, ar jie yra lygūs.
+
+console.log('2.------------');
+function palygink(num1, num2) {
+    if (num1 > num2) {
+        return num1 + ' yra didesnis uz ' + num2;
+    } else if (num1 < num2) {
+        return num1 + ' yra mazesnis uz ' + num2;
+    } else {
+        return num1 + ' yra lygus ' + num2;
+    }
+}              
+const rezultatas = palygink(10,20);
+console.log(rezultatas);
+
+//3. Parašyti funkciją, kuri priimtų vieną skaičių. Turi būti grąžinamas rezultatas ar tie metai yra keliemieji.
+console.log('3.-----NEGERAI');
+function arKelemiejiMetai(year) {
+    if (year / 4) {
+        return year + ' yra keliamieji metai'; 
+    } else {
+        return year + ' nera keliamieji metai'; 
+    }
+}
+const year = arKelemiejiMetai(2001);
+console.log(year);
+
+//4. Parašyti funkciją, kuri priimtų vieną skaičių. Grąžinti skaičiaus kvadratą.
+console.log('4.-----------');
+function kvadratas (k) {
+    return k / (1 / k);
+}
+console.log(kvadratas(16));
+
+//5. Parašyti funkciją, kuri priimtų vieną skaičių, kuris turi būti didesnis už vienetą. Funkcija turi grąžinti visų skaičių sumą, nuo 1 iki įvesto skaičiaus.
+console.log('5.-----------');
+function skaiciuSuma(n) {
+    if (n == 1) return 1;
+    return n + skaiciuSuma(n - 1);
+}
+console.log(skaiciuSuma(6));
+
+//6. Parašykite funkciją, kuri priimtų skaičių ir suskaičiuotų, iš kiek sveikų skaičių jos argumentas dalijasi be liekanos (išskyrus vienetą ir patį save).
+console.log('6.------NEPADARYTA');
+
+//7. Parašyti funkciją, kuri priimtų vieną kintamąjį - tekstą. Funkcija turi išvesti tekstą į ekraną ir dar papildomai parodyti jo ilgį (simbolių kiekį).
+console.log('7.----ne---');
+function stringoIlgis(n) {
+    if (n.length !== 'n')
+    return 'Stringo ' + stringoIlgis + '  ilgis yra' + stringoIlgis.length;
+}
+console.log(stringoIlgis); 
 
