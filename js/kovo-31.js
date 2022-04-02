@@ -95,6 +95,7 @@ if ("rope" >= "zirnis") {
 /*
 4. Išvesti sąrašo tipo kintamųjų ilgius
 */
+console.log('kintamieji4-----------');
 const aa = "zuvis";
 const bb = "mesa";
 
@@ -172,7 +173,7 @@ console.log("------------------------------------");
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-//1. nepadaryta su Labas
+//1. Labas 5 kartus
 for (let i = 0; i <= 4; i++) {
   console.log("Labas");
 }
@@ -226,8 +227,8 @@ for (let i = 1; i <= n; i++) {
 }
 //10. Keliamieji metai turi 366 dienas, paprastieji – 365. Visi metai, išskyrus šimtmečius, yra keliamieji, jie dalūs iš 4. Šimtmečių metai yra keliamieji, jeigu dalūs 400. Pvz.: 1600 metai yra keliamieji, nes dalūs iš 400, o 1700 – paprastieji. Raskite visus mūsų eros keliamuosius metus.
 
-/*
-let kelemieji = 366;
+console.log('Nesigauna ----------------');
+/*let kelemieji = 366;
 let paprastieji = 365;
 for (let i = 0; i <= i; i++) {
     if ((0 == kelemieji % 4)  {
@@ -236,14 +237,13 @@ for (let i = 0; i <= i; i++) {
         console.log(paprastieji + ' yra paprastieji metai');
     }
 }
+}
 */
+
 
 /*FUNKCIJOS
-
-10. Parašyti funkciją, kuri priimtų vieną kintamąjį - tekstą. Suskaičiuoti, kiek tekste yra ‚a‘ raidžių
-*/
-
 //1. Parašyti funkciją, kuri priima du skaičius. Grąžina tų skaičių sumą.
+*/
 function sum(a, b) {
   return a + b;
 }
@@ -316,23 +316,31 @@ const nr = telefonoNumeris([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
 console.log(nr);
 
 //9. Parašyti funkciją, kuri priimtų du kintamuosius - tekstus. Palyginti kuris tekstas yra ilgesnis.
-console.log("9.-------------");
-
-function kintamieji(a,b) {
-    for (let i = 0, kintamieji = a.length, kintamieji++) {
-        if (a[i] !== b[i]){
-            return `${kintamieji} zodis yra ilgesnis`;
-        }
-    }
-}
-/*const zodziai = kintamieji(['varna', 'peleda']);
-console.log(zodziai);
+console.log("9.------NESIGAUNA-");
 
 function kintamieji(a, b) {
-  for (let i = 0; i < kintamieji.length; i++) {
-    if (a[i] <= b[i]) {
-      return `${kintamieji} zodis yra ilgesnis`;
+  for (let i = 0; i <= kintamieji.length; i++) {
+    if (a[i] !== b[i]);
+    {
+      return `Tekstas ${zodziai} ilgesnis`;
     }
   }
 }
-*/
+const zodziai = palygink(["varna", "peleda"]);
+console.log(zodziai);
+//return `${kintamieji} zodis yra ilgesnis`;
+//10. Parašyti funkciją, kuri priimtų vieną kintamąjį - tekstą. Suskaičiuoti, kiek tekste yra ‚a‘ raidžių
+console.log("10.-------------");
+function SuskaiciuokRaide(stringas, raide) {
+  let raide_suma = 0;
+  for (let position = 0; position < stringas.length; position++) {
+    if (stringas.charAt(position) == raide) {
+      raide_suma += 1;
+    }
+  }
+  return raide_suma;
+}
+
+const zodis = SuskaiciuokRaide("nebeprisikiškiakopūsteliaujantiesiems", "i");
+console.log(zodis);
+
