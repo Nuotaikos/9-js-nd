@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./js/kovo-31.js",
+    "dev": "nodemon ./js/class-radio.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
