@@ -28,12 +28,7 @@ class Radio {
         this.dazniai = diapazonas;
         this.stations = stations;
     }
-    running(Radio) {
-        if (!this.turnedOn) {
-        console.log(this.name, 'Panasu, kad nera elektros...');
-        return;
-    }
-}
+    
     switchOn () {
         this.turnedOn = true;
         console.log(`${this.name} radias ijungtas`);
@@ -42,12 +37,17 @@ class Radio {
         this.turnedOn = false;
         console.log(`${this.name} radias isjungtas`);
     }
-    volume () {
-        if (this.volume < 0 || this.volume === 0); {
-            console.log('Garsas nutildytas');
+    sound (volume) {
+        if (!this.turnedOn) {
+            console.log(this.name, 'Panasu, kad nera elektros...');
+            return;
         }
-        if (this.volume > 100) this.volume = 100; {
-            console.log('Garseja');
+        if (i = 0, volume >= 50, i++); {
+            console.log(this.name, 'Garseja');
+            
+        }
+        if (volume <= 51 || volume >= 100); {
+            console.log(this.name, 'Tildosi');
         }
         
     }
@@ -57,4 +57,6 @@ class Radio {
 const M1 = new Radio('Sony');
 console.log(M1.name);
 M1.switchOn();
-M1.volume(45)
+M1.switchOff();
+M1.sound(2)
+
