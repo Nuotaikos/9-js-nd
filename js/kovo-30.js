@@ -22,7 +22,7 @@ console.log('Geles:', geles);
 const zydejimoMenesis = ['balandis','gegužė', 'birželis','liepa', 'rugpjūtis']; 
 console.log('Zydejimo menesis:', zydejimoMenesis);
 
-const sarasuVertes = zydejimoMenesis[4] + ", " + zydejimoMenesis[3] + ", " + zydejimoMenesis[2] + " , " +zydejimoMenesis[1] + " , " + zydejimoMenesis[0] + " , " + geles[4] + " , " + geles[3] + " , " + geles[2] + " , " + geles[1] + " , " + geles[0]  + " , " + zydejimoMenesis[4]  + ", " + zydejimoMenesis[3]  + " , " + zydejimoMenesis[2]  + " , " + zydejimoMenesis[1]  + " , " + zydejimoMenesis[0];
+const sarasuVertes = zydejimoMenesis[4] + ", " + zydejimoMenesis[3] + ", " + zydejimoMenesis[2] + ", " +zydejimoMenesis[1] + ", " + zydejimoMenesis[0] + ", " + geles[4] + ", " + geles[3] + ", " + geles[2] + ", " + geles[1] + ", " + geles[0]  + ", " + zydejimoMenesis[4]  + ", " + zydejimoMenesis[3]  + ", " + zydejimoMenesis[2]  + ", " + zydejimoMenesis[1]  + ", " + zydejimoMenesis[0];
 console.log(sarasuVertes);
 
 /*1.Žinomas skaičius n. Parašykite programą, kuri nustatytų ar skaičius yra blogas ar geras? Neigiamas –„Blogas“, teigiamas „Geras“. Pasitikrinkite: Kai n = 20, turėtume gauti: Skaičius geras.
@@ -126,7 +126,26 @@ if (skaicius === 1 || skaicius === 3 || skaicius === 5) {
 Pasitikrinkite. Kai m = 1904, turi būti spausdinama: n = 3. Kai m = 2005, turi būti spausdinama: Metai neolimpiniai.
 */
 
+let metai = (2005);
+if ((metai - 1896) % 4 === 0) {
+    n = (metai - 1896) + 1;
+console.log(`${metai} vyko olimpines zaidynes`);
+} else {
+    console.log(`Metai neolimpiniai`);
+}
+
 /* 
 10. Petras išėjo iš namų, kai laikrodis rodė v1 valandų ir m1 minučių. Į gimnaziją Petro kelionė trunka m2 minučių. Parašykite programą, kuri ekrane parodytų pranešimą apie tai, ar Petras nepavėluos į pamoką, prasidedančią v valandų ir m minučių. Pasitikrinkite: 
 jei v1 = 8, m1 = 29, m2 = 43, v = 9, m = 5, turi būti: Petras į pamoką pavėluos; jei v1 = 8, m1 = 29, m2 = 23, v = 9, m = 5, turi būti: Petras į pamoką nepavėluos
 */
+v1 = 8;
+m1 = 29;
+m2 = 23;
+v = 9;
+m = 5;
+
+if (v1 * 60 + m1+ m2 > v * 60 + m) {
+console.log('Petras į pamoką pavėluos');
+} else {
+    console.log('Petras į pamoką nepavėluos');
+}

@@ -95,7 +95,7 @@ if ("rope" >= "zirnis") {
 /*
 4. Išvesti sąrašo tipo kintamųjų ilgius
 */
-console.log('kintamieji4-----------');
+console.log("kintamieji4-----------");
 const aa = "zuvis";
 const bb = "mesa";
 
@@ -148,26 +148,6 @@ if ("log" >= "mmm") {
   );
 }
 
-/*Ciklo for panaudojimas
-1. Suskaičiuoti ką gausime susumavus skaičius intervale tarp (imtinai):
-a)	0 … 0
-b)	0 … 4
-c)	0 … 100
-d)	574 … 815
-e)	-50 … 50
-f)	-70 … 30
-*/
-let suma = 0;
-
-for (let i = 0; i <= 0; i++) {
-  console.log(i + i++);
-}
-
-for (let i = 0; i <= 4; i++) {
-  console.log(i);
-  suma += i++;
-}
-
 //CIKLAI
 console.log("------------------------------------");
 function rand(min, max) {
@@ -206,7 +186,7 @@ for (let i = 1; i <= 10; i++) {
   console.log(i * skai);
 }
 //8. Vienas colis yra 2,54 cm. Sudarykite programą kuri pateiktų ekrane lentelę nuo 1 iki n colius centimetrais.
-let n = 15;
+let n = 5;
 for (let i = 1; i <= n; i++) {
   console.log(i * 2.54);
 }
@@ -227,30 +207,30 @@ for (let i = 1; i <= n; i++) {
 }
 //10. Keliamieji metai turi 366 dienas, paprastieji – 365. Visi metai, išskyrus šimtmečius, yra keliamieji, jie dalūs iš 4. Šimtmečių metai yra keliamieji, jeigu dalūs 400. Pvz.: 1600 metai yra keliamieji, nes dalūs iš 400, o 1700 – paprastieji. Raskite visus mūsų eros keliamuosius metus.
 
-console.log('Nesigauna ----------------');
-/*let kelemieji = 366;
-let paprastieji = 365;
-for (let i = 0; i <= i; i++) {
-    if ((0 == kelemieji % 4)  {
-        console.log(kelemieji + ' yra kelemieji metai');
-    } else {
-        console.log(paprastieji + ' yra paprastieji metai');
-    }
-}
-}
-*/
+console.log("10.----------------");
+let metai = 0;
+let era = 2022;
 
+for (let i = 0; i < era; i++) {
+  if (metai % 4 === 0 && metai % 400 === 0) {
+    console.log(`${metai} yra keliamieji metai`);
+  } else {
+    console.log(`${metai} nėra keliamieji metai`);
+  }
+  metai++;
+}
 
-/*FUNKCIJOS
+//FUNKCIJOS
 //1. Parašyti funkciją, kuri priima du skaičius. Grąžina tų skaičių sumą.
-*/
+
+console.log("F.1.------------");
 function sum(a, b) {
   return a + b;
 }
 console.log(sum(1, 2));
 //2. Parašyti funkciją, kuri priima du kintamuosius. Palygina tuos du skaičius ir grąžina rezultatą ar pirmas skaičius yra didesnis, ar antras, ar jie yra lygūs.
 
-console.log("2.------------");
+console.log("F.2.------------");
 function palygink(num1, num2) {
   if (num1 > num2) {
     return num1 + " yra didesnis uz " + num2;
@@ -264,37 +244,51 @@ const rezultatas = palygink(10, 20);
 console.log(rezultatas);
 
 //3. Parašyti funkciją, kuri priimtų vieną skaičių. Turi būti grąžinamas rezultatas ar tie metai yra keliemieji.
-console.log("3.-----NEGERAI");
+console.log("F.3.-------------");
 function arKelemiejiMetai(year) {
-  if (year / 4) {
-    return year + " yra keliamieji metai";
+  if (0 === year % 4 && year > 0) {
+    return `${year} yra keliamieji metai`;
   } else {
-    return year + " nera keliamieji metai";
+    return `${year} nera keliamieji metai`;
   }
 }
-const year = arKelemiejiMetai(2001);
-console.log(year);
+metai = 1600;
+check = arKelemiejiMetai(metai);
+console.log(check);
 
 //4. Parašyti funkciją, kuri priimtų vieną skaičių. Grąžinti skaičiaus kvadratą.
-console.log("4.-----------");
+console.log("F.4.-----------");
 function kvadratas(k) {
   return k / (1 / k);
 }
 console.log(kvadratas(16));
 
 //5. Parašyti funkciją, kuri priimtų vieną skaičių, kuris turi būti didesnis už vienetą. Funkcija turi grąžinti visų skaičių sumą, nuo 1 iki įvesto skaičiaus.
-console.log("5.-----------");
+console.log("F.5.-----------");
 function skaiciuSuma(n) {
-  if (n == 1) return 1;
+  if (n === 1) return 1;
   return n + skaiciuSuma(n - 1);
 }
 console.log(skaiciuSuma(6));
 
 //6. Parašykite funkciją, kuri priimtų skaičių ir suskaičiuotų, iš kiek sveikų skaičių jos argumentas dalijasi be liekanos (išskyrus vienetą ir patį save).
-console.log("6.------NEPADARYTA");
+console.log("F.6.-----------");
+function liekana(nuo, iki, daliklis) {
+  let count = 0;
+
+  for (let i = nuo; i < iki; i++) {
+    if (i % daliklis === 0 && i !== -1 && i !== 0) {
+      count++;
+    }
+  }
+
+  return `Skaičių intervale tarp ${nuo} ir ${iki}, besidalijančių be liekanos iš ${daliklis} yra ${count} vienetai.`;
+}
+
+console.log(liekana(8, 31, 7));
 
 //7. Parašyti funkciją, kuri priimtų vieną kintamąjį - tekstą. Funkcija turi išvesti tekstą į ekraną ir dar papildomai parodyti jo ilgį (simbolių kiekį).
-console.log("7.-------------");
+console.log("F.7.-------------");
 
 function zodzioIlgis(name) {
   return `Zodis "${name}" sudarytas is ${name.length} raidziu.`;
@@ -302,7 +296,7 @@ function zodzioIlgis(name) {
 const gelesPavadinimas = zodzioIlgis("Raskila");
 console.log(gelesPavadinimas);
 //8. Parašyti funkciją telefonoNumeris, kuri priima vieną kintamąjį – masyvą su 10 skaičių jame. Funkcija turi grąžinti telefono numerį tokiu formatu - "(XXX) XXX-XXXX".
-console.log("8.-------------");
+console.log("F.8.-------------");
 
 function telefonoNumeris(numbers) {
   let format = "(xxx) xxx-xxxx";
@@ -316,31 +310,30 @@ const nr = telefonoNumeris([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
 console.log(nr);
 
 //9. Parašyti funkciją, kuri priimtų du kintamuosius - tekstus. Palyginti kuris tekstas yra ilgesnis.
-console.log("9.------NESIGAUNA-");
-
-function kintamieji(a, b) {
-  for (let i = 0; i <= kintamieji.length; i++) {
-    if (a[i] !== b[i]);
-    {
-      return `Tekstas ${zodziai} ilgesnis`;
-    }
+console.log("F.9.---------------");
+function tekstas(a, b) {
+  if (a.length > b.length) {
+    return `Tekstas ${a} ilgesnis nei ${b}.`;  
+  } else if (a.length < b.length) {
+    return `Tekstas ${b} ilgesnis nei ${a}.`;
+  } else  {
+    return `Tekstas ${b} ir ${a} yra lygus.`;
   }
 }
-const zodziai = palygink(["varna", "peleda"]);
-console.log(zodziai);
-//return `${kintamieji} zodis yra ilgesnis`;
+const zo = tekstas("varnalesa", "peleda");
+console.log(zo);
+
 //10. Parašyti funkciją, kuri priimtų vieną kintamąjį - tekstą. Suskaičiuoti, kiek tekste yra ‚a‘ raidžių
 console.log("10.-------------");
 function SuskaiciuokRaide(stringas, raide) {
-  let raide_suma = 0;
+  let raideSuma = 0;
   for (let position = 0; position < stringas.length; position++) {
-    if (stringas.charAt(position) == raide) {
-      raide_suma += 1;
+    if (stringas.charAt(position) === raide) {
+      raideSuma += 1;
     }
   }
-  return raide_suma;
+  return raideSuma;
 }
 
 const zodis = SuskaiciuokRaide("nebeprisikiškiakopūsteliaujantiesiems", "i");
 console.log(zodis);
-
