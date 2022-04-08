@@ -149,48 +149,56 @@ if ("log" >= "mmm") {
 }
 
 //CIKLAI
-console.log("------------------------------------");
+
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+console.log("C.1.-----------------------------------");
 //1. Labas 5 kartus
 for (let i = 0; i <= 4; i++) {
   console.log("Labas");
 }
-console.log("------------------------------------");
+console.log("C.2.-----------------------------------");
 //2. atspausdinti skaičius 0 1 2 3 4
 for (let i = 0; i <= 4; i++) {
   console.log(i);
 }
+console.log("C.3.-----------------------------------");
 //3. atspausdinti skaičius 0 10 20 30 40
-for (let i = 0; i <= 40; i++) {
-  if (i % 10 == 0) console.log(i);
+for (let i = 0; i <= 40; i+10) {
+  console.log(i);
 }
 //4.atspausdinti skaičius 49 50 51 52 53
+console.log("C.4.-----------------------------------");
 for (let i = 49; i <= 53; i++) {
   console.log(i);
 }
 // 5. Naudojant ciklą penkiose eilutėse atspausdinti skirtingus atsitiktinius skaičius nuo 0 iki 10 (vienas skaičius vienoje eilutėje).
+console.log("C.5.-----------------------------------");
 for (let i = 0; i < 5; i++) {
   console.log(rand(0, 10));
 }
 //6. Naudojant ciklą, atspausdinti skaičius nuo 1 iki 20. Nespausdinti skaičių, kurie dalinasi iš 3.
+console.log("C.6.-----------------------------------");
 for (let i = 1; i <= 20; i++) {
   if (i % 3 !== 0) {
     console.log(i);
   }
 }
 //7. Parašykite programą, kuri atspausdintų įvesto skaičiaus daugybos lentelę nuo 1 iki 10.
+console.log("C.7.-----------------------------------");
 let skai = 5;
 for (let i = 1; i <= 10; i++) {
   console.log(i * skai);
 }
 //8. Vienas colis yra 2,54 cm. Sudarykite programą kuri pateiktų ekrane lentelę nuo 1 iki n colius centimetrais.
+console.log("C.8.-----------------------------------");
 let n = 5;
 for (let i = 1; i <= n; i++) {
   console.log(i * 2.54);
 }
 //9. Bankas moka 2% metinių palūkanų. Indėlininkas pasidėjo į banką 100e. Sudarykite kasmetinę banko atskaitą klientui iki n metų. Ataskaitoje pateikite: metus, palūkanas, indėlį.
+console.log("C.9.-----------------------------------");
 let palukanos = 2;
 let indelis = 100;
 for (let i = 1; i <= n; i++) {
@@ -206,9 +214,8 @@ for (let i = 1; i <= n; i++) {
   );
 }
 //10. Keliamieji metai turi 366 dienas, paprastieji – 365. Visi metai, išskyrus šimtmečius, yra keliamieji, jie dalūs iš 4. Šimtmečių metai yra keliamieji, jeigu dalūs 400. Pvz.: 1600 metai yra keliamieji, nes dalūs iš 400, o 1700 – paprastieji. Raskite visus mūsų eros keliamuosius metus.
-
-console.log("10.----------------");
-let metai = 0;
+console.log("C.10.-----------------------------------");
+/*let metai = 0;
 let era = 2022;
 
 for (let i = 0; i < era; i++) {
@@ -219,7 +226,7 @@ for (let i = 0; i < era; i++) {
   }
   metai++;
 }
-
+*/
 //FUNKCIJOS
 //1. Parašyti funkciją, kuri priima du skaičius. Grąžina tų skaičių sumą.
 
