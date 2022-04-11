@@ -73,4 +73,7 @@ while (i !== 5) {
     i = Math.floor((Math.round() * 10) + 1);
     console.log(i);
 }
-*?
+5. Naudojant ciklą atspausdinti skirtingus atsitiktinius skaičius nuo 0 iki 10 (vienas skaičius 
+vienoje eilutėje). Paskutinis atspausdintas skaičius turi būti 5 arba 7; Suskaičiuoti kiek 
+ciklų prasisuko
+*/
